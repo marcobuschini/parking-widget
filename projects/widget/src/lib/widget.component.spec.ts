@@ -6,6 +6,9 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { of, Observable } from 'rxjs';
 import { ParkingSlot } from './parkingslot';
 import { Feature } from './feature';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -24,11 +27,27 @@ describe('WidgetComponent', () => {
     ]
   };
 
+  const dummySlots: ParkingSlot[] = [
+    {
+      id: 0,
+      name: 'SLot 1',
+      features: [
+        'Feature 1',
+        'Feature 2'
+      ]
+    }
+  ]
+
   beforeEach(async () => {
     TestBed.configureTestingModule(
       {
         declarations: [WidgetComponent],
-        imports: [HttpClientTestingModule]
+        imports: [
+          MatCardModule,
+          MatDividerModule,
+          MatListModule,
+          HttpClientTestingModule,
+        ],
       }
     );
   });
@@ -38,7 +57,7 @@ describe('WidgetComponent', () => {
     vendorSpy = jest.spyOn(fixture.componentInstance.service, 'getVendorFeatures')
       .mockReturnValue(of(dummyVendor.features));
     slotsSpy = jest.spyOn(fixture.componentInstance.service, 'getParkingSlots')
-      .mockReturnValue(of([{id: 1, name: 'name', features: ['feature 1']}]));
+      .mockReturnValue(of(dummySlots));
 
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -57,5 +76,7 @@ describe('WidgetComponent', () => {
 
     expect(vendorSpy).toHaveBeenCalled();
     expect(slotsSpy).toHaveBeenCalled();
+
+    expect(fixture).toMatchSnapshot();
   }));
 });

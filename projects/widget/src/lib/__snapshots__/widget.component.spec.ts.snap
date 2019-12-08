@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WidgetComponent should create 1`] = `
+<parking-widget
+  features={[Function Array]}
+  features$={[Function Subscriber]}
+  parkingSlots={[Function Array]}
+  parkingSlots$={[Function Subscriber]}
+  service={[Function WidgetService]}
+>
+  <mat-card
+    class="mat-card"
+  >
+    <mat-list
+      class="mat-list mat-list-base"
+      role="list"
+    >
+      
+      <mat-list-item
+        class="mat-list-item"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+            ng-reflect-disabled="true"
+            ng-reflect-trigger="[object HTMLUnknownElement]"
+          />
+          <div
+            class="mat-list-text"
+          />
+          Feature 1
+        </div>
+      </mat-list-item>
+      <mat-list-item
+        class="mat-list-item"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+            ng-reflect-disabled="true"
+            ng-reflect-trigger="[object HTMLUnknownElement]"
+          />
+          <div
+            class="mat-list-text"
+          />
+          Feature 2
+        </div>
+      </mat-list-item>
+      <mat-list-item
+        class="mat-list-item"
+        role="listitem"
+      >
+        <div
+          class="mat-list-item-content"
+        >
+          <div
+            class="mat-list-item-ripple mat-ripple"
+            mat-ripple=""
+            ng-reflect-disabled="true"
+            ng-reflect-trigger="[object HTMLUnknownElement]"
+          />
+          <div
+            class="mat-list-text"
+          />
+          Feature 3
+        </div>
+      </mat-list-item>
+    </mat-list>
+    <mat-divider
+      aria-orientation="horizontal"
+      class="mat-divider mat-divider-horizontal"
+      role="separator"
+    />
+    <div
+      fxlayout="row"
+      fxlayout.xs="column"
+      fxlayoutalign="space-between"
+    >
+      
+      <div>
+         SLot 1 
+        <mat-list
+          class="mat-list mat-list-base"
+          role="list"
+        >
+          
+          <mat-list-item
+            class="mat-list-item"
+            role="listitem"
+          >
+            <div
+              class="mat-list-item-content"
+            >
+              <div
+                class="mat-list-item-ripple mat-ripple"
+                mat-ripple=""
+                ng-reflect-disabled="true"
+                ng-reflect-trigger="[object HTMLUnknownElement]"
+              />
+              <div
+                class="mat-list-text"
+              />
+              Feature 1
+            </div>
+          </mat-list-item>
+          <mat-list-item
+            class="mat-list-item"
+            role="listitem"
+          >
+            <div
+              class="mat-list-item-content"
+            >
+              <div
+                class="mat-list-item-ripple mat-ripple"
+                mat-ripple=""
+                ng-reflect-disabled="true"
+                ng-reflect-trigger="[object HTMLUnknownElement]"
+              />
+              <div
+                class="mat-list-text"
+              />
+              Feature 2
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </mat-card>
+</parking-widget>
+`;
