@@ -32,7 +32,7 @@ exports[`WidgetComponent should create 1`] = `
           <div
             class="mat-list-text"
           />
-          Feature 1
+          Feature 1 
         </div>
       </mat-list-item>
       <mat-list-item
@@ -51,7 +51,7 @@ exports[`WidgetComponent should create 1`] = `
           <div
             class="mat-list-text"
           />
-          Feature 2
+          Feature 2 
         </div>
       </mat-list-item>
       <mat-list-item
@@ -70,7 +70,7 @@ exports[`WidgetComponent should create 1`] = `
           <div
             class="mat-list-text"
           />
-          Feature 3
+          Feature 3 
         </div>
       </mat-list-item>
     </mat-list>
@@ -108,7 +108,7 @@ exports[`WidgetComponent should create 1`] = `
               <div
                 class="mat-list-text"
               />
-              Feature 1
+              Feature 1 
             </div>
           </mat-list-item>
           <mat-list-item
@@ -127,7 +127,7 @@ exports[`WidgetComponent should create 1`] = `
               <div
                 class="mat-list-text"
               />
-              Feature 2
+              Feature 2 
             </div>
           </mat-list-item>
         </mat-list>
