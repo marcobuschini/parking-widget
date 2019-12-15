@@ -20,3 +20,19 @@ The *parking slot* area contains all the parking slots.
 1. A parking slot should be selectable by the user.
 1. Clicking one of the parking slots in the Widget will add the parking slot to the shopping cart of the host Web app.
 1. Add a button show/hide details (the map and the features list) of the selected parking slot
+
+Building
+========
+
+To build the widget issue the following command from the root of the repository structure:
+```
+ng build widget
+```
+
+The project will be build in the ```dist/widget``` directory.
+
+Installing
+==========
+
+To install the widgt just built in a different project, issue the following command from the root of the project you want to install the package into:
+```cp -R <widget-root>/dist/widget node_modules```
