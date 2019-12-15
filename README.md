@@ -29,10 +29,12 @@ To build the widget issue the following command from the root of the repository 
 ng build widget
 ```
 
-The project will be build in the ```dist/widget``` directory.
+The project will be built in the ```dist/widget``` directory.
 
 Installing
 ==========
 
 To install the widgt just built in a different project, issue the following command from the root of the project you want to install the package into:
-```cp -R <widget-root>/dist/widget node_modules```
+```
+cp -R <widget-root>/dist/widget node_modules
+```
