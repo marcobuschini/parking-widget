@@ -2,13 +2,12 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { WidgetService } from './widget.service';
 import { ParkingSlot } from './parkingslot';
 import { Feature } from './feature';
-import { Subscription, Observable } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { Vendor } from './vendor';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'parking-widget',
-  templateUrl:'widget.component.html',
+  selector: 'mlb-parking-widget',
+  templateUrl: 'widget.component.html',
   styleUrls: ['widget.component.css']
 })
 export class WidgetComponent implements OnInit, OnDestroy {

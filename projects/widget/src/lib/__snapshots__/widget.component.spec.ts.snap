@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`WidgetComponent should create 1`] = `
-<parking-widget
+<mlb-parking-widget
   features={[Function Array]}
   features$={[Function Subscriber]}
   parkingSlots={[Function Array]}
@@ -134,5 +134,5 @@ exports[`WidgetComponent should create 1`] = `
       </div>
     </div>
   </mat-card>
-</parking-widget>
+</mlb-parking-widget>
 `;

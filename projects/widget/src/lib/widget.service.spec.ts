@@ -18,7 +18,7 @@ const dummyVendor: Vendor = {
 const dummyParkingSlots: ParkingSlot[] = [
   {id: 1, name: 'Slot 1', features: ['Feature 1']},
   {id: 2, name: 'Slot 2', features: ['Feature 1', 'Feature 2']},
-]
+];
 
 describe('WidgetService', () => {
   let httpMock: HttpTestingController;
@@ -30,9 +30,9 @@ describe('WidgetService', () => {
     });
   });
 
-  beforeEach(inject([HttpTestingController], (_httpMock) => {
+  beforeEach(inject([HttpTestingController], (mock: HttpTestingController) => {
     service = TestBed.get(WidgetService);
-    httpMock = _httpMock; 
+    httpMock = mock;
   }));
 
   afterEach(() => {

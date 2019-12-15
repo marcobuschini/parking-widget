@@ -15,7 +15,7 @@ describe('WidgetComponent', () => {
   let fixture: ComponentFixture<WidgetComponent>;
 
   let vendorSpy: jest.SpyInstance<Observable<Feature[]>>;
-  let slotsSpy: jest.SpyInstance<Observable<ParkingSlot[]>>
+  let slotsSpy: jest.SpyInstance<Observable<ParkingSlot[]>>;
 
   const dummyVendor: Vendor = {
     name: 'Test Vendor',
@@ -36,7 +36,7 @@ describe('WidgetComponent', () => {
         'Feature 2'
       ]
     }
-  ]
+  ];
 
   beforeEach(async () => {
     TestBed.configureTestingModule(
