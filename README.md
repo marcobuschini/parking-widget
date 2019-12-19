@@ -31,6 +31,20 @@ ng build widget
 
 The project will be built in the ```dist/widget``` directory.
 
+Making it available
+===================
+Install a local copy of Verdaccio, and start it. Run the following command to make your local repository available to the project you are using the widget in:
+```
+npm set registry http://localhost:4873
+```
+
+Then run the following command from the main project directory:
+```
+(cd dist/widget; npm unpublish --force --registry http://localhost:4873 widget@0.0.1; npm publish --force --registry http://localhost:4873)
+```
+
+Then
+
 Installing
 ==========
 
