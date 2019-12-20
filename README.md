@@ -38,17 +38,12 @@ Install a local copy of Verdaccio, and start it. Run the following command to ma
 npm set registry http://localhost:4873
 ```
 
-Then run the following command from the main project directory:
+Then run the following commands from the main ```dist/widget``` directory:
 ```
-(cd dist/widget; npm unpublish --force --registry http://localhost:4873 widget@0.0.1; npm publish --force --registry http://localhost:4873)
+npm unpublish --force --registry http://localhost:4873 widget@0.0.1
+npm publish --force --registry http://localhost:4873
 ```
 
-Then
-
-Installing
-==========
-
-To install the widgt just built in a different project, issue the following command from the root of the project you want to install the package into:
-```
-cp -R <widget-root>/dist/widget node_modules
-```
+The test proejct it at `https://github.com/marcobuschini/interview-november-2019`.
+At present the widget tests correctly but some configuration is wrong and when
+installed it cannot find the widget properties (perhaps the widget is null?).
