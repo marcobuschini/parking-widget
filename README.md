@@ -33,7 +33,11 @@ ng build widget
 The project will be built in the `dist/widget` directory.
 
 ## Making it available
+### The easy way
+Copy the `dist/widget` folder in the `node_modules` folder of the destination project.
+The demo project is already setup to get the package from that folder.
 
+### The hard way
 Install a local copy of Verdaccio from https://verdaccio.org/, and start it. Run the following command to make your local repository available to the project you are using the widget in:
 
 ```
@@ -47,6 +51,7 @@ npm unpublish --force --registry http://localhost:4873 widget@0.0.1
 npm publish --force --registry http://localhost:4873
 ```
 
+### Results of publishing
 The test proejct it at https://github.com/marcobuschini/interview-november-2019.
 At present the widget tests correctly but some configuration is wrong and when
 installed it cannot find the widget properties (perhaps the widget is null?).
