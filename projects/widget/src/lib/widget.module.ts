@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [WidgetComponent],
+  exports: [WidgetComponent],
   imports: [
     CommonModule,
     FlexLayoutModule,
