@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { WidgetService } from './widget.service';
 import { ParkingSlot } from './parkingslot';
 import { Feature } from './feature';
@@ -15,6 +15,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
   @Input()
   public vendor: Vendor;
   public parkingSlots: ParkingSlot[];
+  public showDetails = false;
   public features: Feature[];
   private parkingSlots$: Subscription;
   private features$: Subscription;
@@ -37,5 +38,13 @@ export class WidgetComponent implements OnInit, OnDestroy {
   public ngOnDestroy() {
     this.parkingSlots$.unsubscribe();
     this.features$.unsubscribe();
+  }
+
+  public expand() {
+    this.showDetails = true;
+  }
+
+  public collapse() {
+    this.showDetails = false;
   }
 }

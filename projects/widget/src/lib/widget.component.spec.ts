@@ -9,6 +9,7 @@ import { Feature } from './feature';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { By } from '@angular/platform-browser';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -68,7 +69,7 @@ describe('WidgetComponent', () => {
     component.ngOnDestroy();
   });
 
-  it('should create', fakeAsync(() => {
+  it('should create component with hidden slots, then show, then hide back', fakeAsync(() => {
     expect(component).toBeTruthy();
 
     component.ngOnInit();
@@ -77,6 +78,18 @@ describe('WidgetComponent', () => {
 
     expect(vendorSpy).toHaveBeenCalled();
     expect(slotsSpy).toHaveBeenCalled();
+
+    expect(fixture).toMatchSnapshot();
+
+    let button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    button.click();
+    fixture.detectChanges();
+
+    expect(fixture).toMatchSnapshot();
+
+    button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    button.click();
+    fixture.detectChanges();
 
     expect(fixture).toMatchSnapshot();
   }));
