@@ -35,21 +35,12 @@ The project will be built in the `dist/widget` directory.
 ## Making it available
 ### The easy way
 Copy the `dist/widget` folder in the `node_modules` folder of the destination project.
-The demo project is already setup to get the package from that folder.
+The demo project is already setup to get the package from that folder. Don't symlink it,
+as it will not work that way!
 
 ### The hard way
-Install a local copy of Verdaccio from https://verdaccio.org/, and start it. Run the following command to make your local repository available to the project you are using the widget in:
-
-```
-npm set registry http://localhost:4873
-```
-
-Then run the following commands from the main `dist/widget` directory:
-
-```
-npm unpublish --force --registry http://localhost:4873 widget@0.0.1
-npm publish --force --registry http://localhost:4873
-```
+You could install a local copy of an NPM registry (like Verdaccio from https://verdaccio.org/),
+configure it, and start it. It must act as an NPM registry proxy, too. This is still work in progress.
 
 ### Results of publishing
 The test proejct it at https://github.com/marcobuschini/interview-november-2019.
