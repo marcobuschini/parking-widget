@@ -16,10 +16,10 @@ export class WidgetService {
   }
 
   public getParkingSlots(vendor: Vendor): Observable<ParkingSlot[]> {
-    return this.http.get<ParkingSlot[]>('/vendor/' + encodeURIComponent(vendor.name) + '/parkingslots.json');
+    return this.http.get<ParkingSlot[]>('/assets/vendor/' + encodeURIComponent(vendor.name) + '/parkingslots.json');
   }
 
   public getVendorFeatures(vendor: Vendor): Observable<Feature[]> {
-    return this.http.get<Feature[]>('/vendor/' + encodeURIComponent(vendor.name) + '/features.json');
+    return this.http.get<Feature[]>('/assets/vendor/' + encodeURIComponent(vendor.name) + '/features.json');
   }
 }
