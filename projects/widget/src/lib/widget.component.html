@@ -1,16 +1,20 @@
 <mat-card>
-    <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let feature of features">{{ feature.name }}
-        </mat-list-item>
-    </mat-list>
-    <mat-divider></mat-divider>
-    <div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="space-between">
-        <div *ngFor="let slot of parkingSlots">
-            {{ slot.name }}
-            <mat-list role="list">
-                <mat-list-item role="listitem" *ngFor="let feature of slot.features" role="listitem">{{ feature }}
-                </mat-list-item>
-            </mat-list>
+    <mat-card-title>{{ vendor.name }}</mat-card-title>
+    <mat-card-subtitle>{{ vendor.description }}</mat-card-subtitle>
+    <mat-card-content>
+        <mat-list role="list">
+            <mat-list-item role="listitem" *ngFor="let feature of features">{{ feature.name }}
+            </mat-list-item>
+        </mat-list>
+        <mat-divider></mat-divider>
+        <div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="space-between">
+            <div *ngFor="let slot of parkingSlots">
+                {{ slot.name }}
+                <mat-list role="list">
+                    <mat-list-item role="listitem" *ngFor="let feature of slot.features" role="listitem">{{ feature }}
+                    </mat-list-item>
+                </mat-list>
+            </div>
         </div>
-    </div>
+    </mat-card-content>
 </mat-card>
