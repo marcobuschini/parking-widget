@@ -5,7 +5,7 @@
 
 ## Specificaions
 
-The goal is to show a collection of parking slots and let the user buy one. This must be a "Widget" because it should be an independent module that can be embedded in any Web application. I am an Angular developer, therefore I will write a reusable component.
+The goal is to show a collection of parking slots and let the user buy one. This must be a "Widget" because it should be an independent module that can be embedded in any Web application. I am an Angular developer, therefore I will write a reusable component for an Angular application.
 
 The widget is composed of:
 
