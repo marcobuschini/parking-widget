@@ -30,7 +30,7 @@ describe('WidgetComponent', () => {
   const dummySlots: ParkingSlot[] = [
     {
       id: 0,
-      name: 'SLot 1',
+      name: 'Slot 1',
       features: [
         'Feature 1',
         'Feature 2'
@@ -54,12 +54,13 @@ describe('WidgetComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(WidgetComponent);
-    vendorSpy = jest.spyOn(fixture.componentInstance.service, 'getVendorFeatures')
+    component = fixture.componentInstance;
+    component.vendor = dummyVendor;
+    vendorSpy = jest.spyOn(component.service, 'getVendorFeatures')
       .mockReturnValue(of(dummyVendor.features));
-    slotsSpy = jest.spyOn(fixture.componentInstance.service, 'getParkingSlots')
+    slotsSpy = jest.spyOn(component.service, 'getParkingSlots')
       .mockReturnValue(of(dummySlots));
 
-    component = fixture.componentInstance;
     fixture.detectChanges();
   });
 

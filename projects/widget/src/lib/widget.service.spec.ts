@@ -48,7 +48,7 @@ describe('WidgetService', () => {
       expect(features).toEqual(dummyVendor.features);
     });
 
-    const req = httpMock.expectOne('/vendor/' + encodeURIComponent(dummyVendor.name) + '/features.json');
+    const req = httpMock.expectOne('/assets/vendor/' + encodeURIComponent(dummyVendor.name) + '/features.json');
 
     req.flush(dummyVendor.features);
 
@@ -60,7 +60,7 @@ describe('WidgetService', () => {
       expect(slots).toEqual(dummyParkingSlots);
     });
 
-    const req = httpMock.expectOne('/vendor/' + encodeURIComponent(dummyVendor.name) + '/parkingslots.json');
+    const req = httpMock.expectOne('/assets/vendor/' + encodeURIComponent(dummyVendor.name) + '/parkingslots.json');
 
     req.flush(dummyParkingSlots);
 
