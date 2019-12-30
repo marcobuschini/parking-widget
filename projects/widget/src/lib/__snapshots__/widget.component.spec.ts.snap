@@ -95,8 +95,8 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         role="separator"
       />
       <div
-        fxlayout="row"
-        fxlayout.xs="column"
+        fxlayout.gt-xs="row"
+        fxlayout.lt-sm="column"
         fxlayoutalign="space-between"
       >
         
@@ -212,8 +212,8 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         role="separator"
       />
       <div
-        fxlayout="row"
-        fxlayout.xs="column"
+        fxlayout.gt-xs="row"
+        fxlayout.lt-sm="column"
         fxlayoutalign="space-between"
       >
         
@@ -373,8 +373,8 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         role="separator"
       />
       <div
-        fxlayout="row"
-        fxlayout.xs="column"
+        fxlayout.gt-xs="row"
+        fxlayout.lt-sm="column"
         fxlayoutalign="space-between"
       >
         
