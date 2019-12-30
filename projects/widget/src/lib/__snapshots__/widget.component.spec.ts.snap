@@ -7,7 +7,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots={[Function Array]}
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
-  showDetails="false"
+  showDetails={[Function Array]}
   vendor={[Function Object]}
 >
   <mat-card
@@ -124,7 +124,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots={[Function Array]}
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
-  showDetails={[Function Boolean]}
+  showDetails={[Function Array]}
   vendor={[Function Object]}
 >
   <mat-card
@@ -285,7 +285,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots={[Function Array]}
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
-  showDetails="false"
+  showDetails={[Function Array]}
   vendor={[Function Object]}
 >
   <mat-card

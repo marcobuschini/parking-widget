@@ -15,7 +15,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
   @Input()
   public vendor: Vendor;
   public parkingSlots: ParkingSlot[];
-  public showDetails = false;
+  public showDetails: boolean[];
   public features: Feature[];
   private parkingSlots$: Subscription;
   private features$: Subscription;
@@ -26,6 +26,10 @@ export class WidgetComponent implements OnInit, OnDestroy {
     this.parkingSlots$ = this.service.getParkingSlots(this.vendor).subscribe(
       slots => {
         this.parkingSlots = slots;
+        this.showDetails = [];
+        for (let index = 0; index < this.parkingSlots.length; index++) {
+         this.showDetails[index] = false;
+        }
       }
     );
     this.features$ = this.service.getVendorFeatures(this.vendor).subscribe(
@@ -40,11 +44,11 @@ export class WidgetComponent implements OnInit, OnDestroy {
     this.features$.unsubscribe();
   }
 
-  public expand() {
-    this.showDetails = true;
+  public expand(slot) {
+    this.showDetails[slot.id] = true;
   }
 
-  public collapse() {
-    this.showDetails = false;
+  public collapse(slot) {
+    this.showDetails[slot.id] = false;
   }
 }
