@@ -104,7 +104,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
            Slot 1 
           
           <button
-            mat-button=""
+            mat-stroked-button=""
           >
             Expand
           </button>
@@ -222,7 +222,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           
           
           <button
-            mat-button=""
+            mat-stroked-button=""
           >
             Collapse
           </button>
@@ -382,7 +382,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
            Slot 1 
           
           <button
-            mat-button=""
+            mat-stroked-button=""
           >
             Expand
           </button>
