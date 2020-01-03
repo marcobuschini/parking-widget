@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
+import { EventEmitter } from 'events';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -17,6 +18,7 @@ describe('WidgetComponent', () => {
 
   let vendorSpy: jest.SpyInstance<Observable<Feature[]>>;
   let slotsSpy: jest.SpyInstance<Observable<ParkingSlot[]>>;
+  let addSpy: jest.SpyInstance<void, [ParkingSlot?]>;
 
   const dummyVendor: Vendor = {
     name: 'Test Vendor',
@@ -61,6 +63,7 @@ describe('WidgetComponent', () => {
       .mockReturnValue(of(dummyVendor.features));
     slotsSpy = jest.spyOn(component.service, 'getParkingSlots')
       .mockReturnValue(of(dummySlots));
+    addSpy = jest.spyOn(component.buying, 'emit');
 
     fixture.detectChanges();
   });
@@ -92,5 +95,16 @@ describe('WidgetComponent', () => {
     fixture.detectChanges();
 
     expect(fixture).toMatchSnapshot();
+  }));
+
+  it('should add to cart', fakeAsync(() => {
+    component.ngOnInit();
+
+    flush();
+
+    let button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    button.click();
+    fixture.detectChanges();
+    expect(addSpy).toHaveBeenCalled();
   }));
 });

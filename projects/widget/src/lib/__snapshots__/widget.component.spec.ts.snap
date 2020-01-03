@@ -2,6 +2,7 @@
 
 exports[`WidgetComponent should create component with hidden slots, then show, then hide back 1`] = `
 <mlb-parking-widget
+  buying={[Function EventEmitter]}
   features={[Function Array]}
   features$={[Function Subscriber]}
   parkingSlots={[Function Array]}
@@ -102,6 +103,11 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         
         <div>
            Slot 1 
+          <button
+            mat-stroked-button=""
+          >
+            Add to cart
+          </button>
           
           <button
             mat-stroked-button=""
@@ -119,6 +125,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
 
 exports[`WidgetComponent should create component with hidden slots, then show, then hide back 2`] = `
 <mlb-parking-widget
+  buying={[Function EventEmitter]}
   features={[Function Array]}
   features$={[Function Subscriber]}
   parkingSlots={[Function Array]}
@@ -219,58 +226,19 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         
         <div>
            Slot 1 
-          
+          <button
+            mat-stroked-button=""
+          >
+            Add to cart
+          </button>
           
           <button
             mat-stroked-button=""
           >
-            Collapse
+            Expand
           </button>
           
-          <mat-list
-            class="mat-list mat-list-base"
-            role="list"
-          >
-            
-            <mat-list-item
-              class="mat-list-item"
-              role="listitem"
-            >
-              <div
-                class="mat-list-item-content"
-              >
-                <div
-                  class="mat-list-item-ripple mat-ripple"
-                  mat-ripple=""
-                  ng-reflect-disabled="true"
-                  ng-reflect-trigger="[object HTMLUnknownElement]"
-                />
-                <div
-                  class="mat-list-text"
-                />
-                Feature 1 
-              </div>
-            </mat-list-item>
-            <mat-list-item
-              class="mat-list-item"
-              role="listitem"
-            >
-              <div
-                class="mat-list-item-content"
-              >
-                <div
-                  class="mat-list-item-ripple mat-ripple"
-                  mat-ripple=""
-                  ng-reflect-disabled="true"
-                  ng-reflect-trigger="[object HTMLUnknownElement]"
-                />
-                <div
-                  class="mat-list-text"
-                />
-                Feature 2 
-              </div>
-            </mat-list-item>
-          </mat-list>
+          
         </div>
       </div>
     </mat-card-content>
@@ -280,6 +248,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
 
 exports[`WidgetComponent should create component with hidden slots, then show, then hide back 3`] = `
 <mlb-parking-widget
+  buying={[Function EventEmitter]}
   features={[Function Array]}
   features$={[Function Subscriber]}
   parkingSlots={[Function Array]}
@@ -380,6 +349,11 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
         
         <div>
            Slot 1 
+          <button
+            mat-stroked-button=""
+          >
+            Add to cart
+          </button>
           
           <button
             mat-stroked-button=""

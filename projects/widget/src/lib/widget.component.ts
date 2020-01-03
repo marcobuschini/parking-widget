@@ -19,6 +19,8 @@ export class WidgetComponent implements OnInit, OnDestroy {
   public features: Feature[];
   private parkingSlots$: Subscription;
   private features$: Subscription;
+  @Output()
+  public buying = new EventEmitter<ParkingSlot>();
 
   public constructor(public service: WidgetService) { }
 
@@ -44,11 +46,15 @@ export class WidgetComponent implements OnInit, OnDestroy {
     this.features$.unsubscribe();
   }
 
-  public expand(slot) {
+  public expand(slot: ParkingSlot) {
     this.showDetails[slot.id] = true;
   }
 
-  public collapse(slot) {
+  public collapse(slot: ParkingSlot) {
     this.showDetails[slot.id] = false;
+  }
+
+  public addToCart(slot: ParkingSlot) {
+    this.buying.emit(slot);
   }
 }
