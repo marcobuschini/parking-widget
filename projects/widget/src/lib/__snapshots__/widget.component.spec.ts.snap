@@ -232,13 +232,57 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
             Add to cart
           </button>
           
+          
           <button
             mat-stroked-button=""
           >
-            Expand
+            Collapse
           </button>
           
-          
+          <mat-list
+            class="mat-list mat-list-base"
+            role="list"
+          >
+            
+            <mat-list-item
+              class="mat-list-item"
+              role="listitem"
+            >
+              <div
+                class="mat-list-item-content"
+              >
+                <div
+                  class="mat-list-item-ripple mat-ripple"
+                  mat-ripple=""
+                  ng-reflect-disabled="true"
+                  ng-reflect-trigger="[object HTMLUnknownElement]"
+                />
+                <div
+                  class="mat-list-text"
+                />
+                Feature 1 
+              </div>
+            </mat-list-item>
+            <mat-list-item
+              class="mat-list-item"
+              role="listitem"
+            >
+              <div
+                class="mat-list-item-content"
+              >
+                <div
+                  class="mat-list-item-ripple mat-ripple"
+                  mat-ripple=""
+                  ng-reflect-disabled="true"
+                  ng-reflect-trigger="[object HTMLUnknownElement]"
+                />
+                <div
+                  class="mat-list-text"
+                />
+                Feature 2 
+              </div>
+            </mat-list-item>
+          </mat-list>
         </div>
       </div>
     </mat-card-content>

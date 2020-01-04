@@ -10,7 +10,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
-import { EventEmitter } from 'events';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -84,13 +83,13 @@ describe('WidgetComponent', () => {
 
     expect(fixture).toMatchSnapshot();
 
-    let button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    let button = fixture.debugElement.queryAll(By.css('button'))[1].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
 
     expect(fixture).toMatchSnapshot();
 
-    button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    button = fixture.debugElement.queryAll(By.css('button'))[1].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
 
@@ -102,7 +101,7 @@ describe('WidgetComponent', () => {
 
     flush();
 
-    let button = fixture.debugElement.query(By.css('button')).nativeElement as HTMLButtonElement;
+    const button = fixture.debugElement.queryAll(By.css('button'))[0].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
     expect(addSpy).toHaveBeenCalled();
