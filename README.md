@@ -44,5 +44,3 @@ configure it, and start it. It must act as an NPM registry proxy, too. This is s
 
 ### Results of publishing
 The test proejct it at https://github.com/marcobuschini/interview-november-2019.
-At present the widget tests correctly but some configuration is wrong and when
-installed it cannot find the widget properties (perhaps the widget is null?).
