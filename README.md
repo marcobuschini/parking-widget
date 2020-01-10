@@ -32,7 +32,24 @@ ng build widget
 
 The project will be built in the `dist/widget` directory.
 
+## Documentation
+The API for the widget can be generated with:
+
+```
+npm run compodoc
+```
+
+The generated documentation will be in the `docs` folder for interoperability
+with GitHub Pages.
+
 ## Making it available
+### The public way
+Issue the command ```npm publish``` command after testing, and building the widget to
+have it published in the default npm registry. You must be logged in the default
+registry for this to work.
+
+Then run ```npm install parking-widget``` to install in any project.
+
 ### The easy way
 Copy the `dist/widget` folder in the `node_modules` folder of the destination project.
 The demo project is already setup to get the package from that folder. Don't symlink it,
@@ -43,4 +60,5 @@ You could install a local copy of an NPM registry (like Verdaccio from https://v
 configure it, and start it. It must act as an NPM registry proxy, too. This is still work in progress.
 
 ### Results of publishing
-The test proejct it at https://github.com/marcobuschini/interview-november-2019.
+The test proejct it at https://github.com/marcobuschini/interview-november-2019. It the widget was
+installed "the easy way" described above.
