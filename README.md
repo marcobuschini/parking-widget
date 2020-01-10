@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/marcobuschini/parking-widget.svg?branch=master)](https://travis-ci.org/marcobuschini/parking-widget)
 [![Coverage Status](https://coveralls.io/repos/github/marcobuschini/parking-widget/badge.svg)](https://coveralls.io/github/marcobuschini/parking-widget)
+[![Documentation](https://img.shields.io/badge/docs-read-brightgreen)](https://marcobuschini.github.io/parking-widget/index.html)
 
 # Parking Widget
 
@@ -33,14 +34,17 @@ ng build widget
 The project will be built in the `dist/widget` directory.
 
 ## Documentation
-The API for the widget can be generated with:
+
+The widget's API documentation is available by clicking the `docs` badge at the beginning of this page.
+
+The documentation can be generated with:
 
 ```
 npm run compodoc
 ```
 
 The generated documentation will be in the `docs` folder for interoperability
-with GitHub Pages.
+with GitHub Pages and the above link.
 
 ## Making it available
 ### The public way
