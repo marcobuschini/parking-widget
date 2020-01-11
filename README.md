@@ -66,3 +66,9 @@ configure it, and start it. It must act as an NPM registry proxy, too. This is s
 ### Results of publishing
 The test proejct it at https://github.com/marcobuschini/interview-november-2019. It the widget was
 installed "the easy way" described above.
+
+## Bibliography
+1. [Angular documentation](https://angular.io/)
+1. [Angular Material documentation](https://material.angular.io/)
+1. [Angular Package Format documentation](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview)
+1. [NPM documentation](https://docs.npmjs.com/)
