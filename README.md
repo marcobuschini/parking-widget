@@ -67,8 +67,16 @@ configure it, and start it. It must act as an NPM registry proxy, too. This is s
 The test proejct it at https://github.com/marcobuschini/interview-november-2019. It the widget was
 installed "the easy way" described above.
 
+## Translating
+This widget uses [NGX Translate](http://www.ngx-translate.com/) for internationalization. To extract
+the strings to translate use the command `npm run extract-i18n`. This will generate the file
+`projects/widget/src/assets/i18n/strings.pot` that can feeded into any translation tool that generates
+translations in JSON format, such as [OneSky](https://www.oneskyapp.com/). Download the translated
+files ZIP archive and unpack it into the `projects/widget/src/lib/assets/i18n/` folder.
+
 ## Bibliography
 1. [Angular documentation](https://angular.io/)
 1. [Angular Material documentation](https://material.angular.io/)
 1. [Angular Package Format documentation](https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview)
+1. [NGX Translate](https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular7-app-with-ngx-translate)
 1. [NPM documentation](https://docs.npmjs.com/)
