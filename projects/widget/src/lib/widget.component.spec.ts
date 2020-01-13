@@ -12,6 +12,8 @@ import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
 import { TranslateTestingModule } from 'ngx-translate-testing';
 
+import en from './assets/i18n/en-US.json';
+
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
   let fixture: ComponentFixture<WidgetComponent>;
@@ -51,16 +53,7 @@ describe('WidgetComponent', () => {
           MatListModule,
           HttpClientTestingModule,
           TranslateTestingModule.withTranslations({
-            ['en-US']: {
-              "Add to cart": "Add to cart",
-              "Collapse": "Collapse",
-              "Expand": "Expand"
-            },
-            ['it-IT']: {
-              "Add to cart": "Aggiungi al carrello",
-              "Collapse": "Riduci",
-              "Expand": "Espandi"
-            }
+            ['en-US']: en
           })
         ],
       }
