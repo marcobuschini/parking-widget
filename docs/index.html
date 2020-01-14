@@ -52,13 +52,19 @@
 <li>Add a button show/hide details (the map and the features list) of the selected parking slot</li>
 </ol>
 <h2 id="building">Building</h2>
-<p>To build the widget issue the following command from the root of the repository structure:</p>
+<p>Before building the widget install all dependencies with the command:</p>
+<div><pre class="line-numbers"><code class="language-none">npm install</code></pre></div><p>To build the widget issue the following command from the root of the repository structure:</p>
 <div><pre class="line-numbers"><code class="language-none">ng build widget</code></pre></div><p>The project will be built in the <code>dist/widget</code> directory.</p>
 <h2 id="documentation">Documentation</h2>
 <p>The widget&#39;s API documentation is available by clicking the <code>docs</code> badge at the beginning of this page.</p>
 <p>The documentation can be generated with:</p>
 <div><pre class="line-numbers"><code class="language-none">npm run compodoc</code></pre></div><p>The generated documentation will be in the <code>docs</code> folder for interoperability
 with GitHub Pages and the above link.</p>
+<h2 id="translating">Translating</h2>
+<p>The tool <a href="https://github.com/ng-packagr/ng-packagr">ng-packgr</a> still does not support
+exporting assets with the package so translations are not yet available with this
+release. As soon as the relevant <a href="https://github.com/ng-packagr/ng-packagr/pull/1465">pull request</a>
+will be released it will be possible to resume work on this feature.</p>
 <h2 id="making-it-available">Making it available</h2>
 <h3 id="the-public-way">The public way</h3>
 <p>Issue the command <code>npm publish</code> command after testing, and building the widget to

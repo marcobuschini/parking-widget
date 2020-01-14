@@ -25,6 +25,12 @@ The _parking slot_ area contains all the parking slots.
 
 ## Building
 
+Before building the widget install all dependencies with the command:
+
+```
+npm install
+```
+
 To build the widget issue the following command from the root of the repository structure:
 
 ```
@@ -45,6 +51,13 @@ npm run compodoc
 
 The generated documentation will be in the `docs` folder for interoperability
 with GitHub Pages and the above link.
+
+## Translating
+
+The tool [ng-packgr](https://github.com/ng-packagr/ng-packagr) still does not support
+exporting assets with the package so translations are not yet available with this
+release. As soon as the relevant [pull request](https://github.com/ng-packagr/ng-packagr/pull/1465)
+will be released it will be possible to resume work on this feature.
 
 ## Making it available
 ### The public way
