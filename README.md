@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/marcobuschini/parking-widget.svg?branch=master)](https://travis-ci.org/marcobuschini/parking-widget)
 [![Coverage Status](https://coveralls.io/repos/github/marcobuschini/parking-widget/badge.svg)](https://coveralls.io/github/marcobuschini/parking-widget)
 [![Documentation](https://img.shields.io/badge/docs-read-brightgreen)](https://marcobuschini.github.io/parking-widget/index.html)
+[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen)](http://commitizen.github.io/cz-cli/)
 
 # Parking Widget
 
