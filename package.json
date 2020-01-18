@@ -43,7 +43,10 @@
     "@types/jest": "^24.9.0",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.2.1",
+    "commitizen": "^4.0.3",
     "coveralls": "^3.0.9",
+    "cz-conventional-changelog": "^3.0.2",
+    "husky": "^4.0.10",
     "jest": "^24.9.0",
     "jest-html-reporter": "^2.8.0",
     "ng-packagr": "^5.7.1",
@@ -53,5 +56,15 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
   }
 }
