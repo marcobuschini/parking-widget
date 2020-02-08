@@ -20,14 +20,17 @@
               "tsConfig": "projects/widget/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
             "main": "projects/widget/src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
@@ -42,11 +45,16 @@
               "projects/widget/tsconfig.lib.json",
               "projects/widget/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**"]
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }
     }
   },
-  "defaultProject": "widget"
+  "defaultProject": "widget",
+  "cli": {
+    "analytics": false
+  }
 }

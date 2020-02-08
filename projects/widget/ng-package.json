@@ -3,5 +3,9 @@
   "dest": "../../dist/widget",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "keepLifecycleScripts": true,
+  "assets": [
+    "assets/i18n/*.json"
+  ]
 }

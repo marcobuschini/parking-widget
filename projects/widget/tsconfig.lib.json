@@ -18,6 +18,7 @@
     ]
   },
   "angularCompilerOptions": {
+    "enableIvy": false,
     "enableResourceInlining": true,
     "flatModuleId": "widget",
     "flatModuleOutFile": true,
