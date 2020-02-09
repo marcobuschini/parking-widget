@@ -84,9 +84,9 @@ installed "the easy way" described above.
 ## Translating
 This widget uses [NGX Translate](http://www.ngx-translate.com/) for internationalization. To extract
 the strings to translate use the command `npm run extract-i18n`. This will generate the file
-`projects/widget/src/assets/i18n/strings.pot` that can feeded into any translation tool that generates
+`projects/widget/assets/i18n/strings.pot` that can feeded into any translation tool that generates
 translations in JSON format, such as [OneSky](https://www.oneskyapp.com/). Download the translated
-files ZIP archive and unpack it into the `projects/widget/src/lib/assets/i18n/` folder.
+files ZIP archive and unpack it into the `projects/widget/assets/i18n/` folder.
 
 ## Bibliography
 1. [Angular documentation](https://angular.io/)
