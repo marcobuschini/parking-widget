@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "sh bin/build.sh",
     "test": "ng test",
     "lint": "ng lint",
     "compodoc": "compodoc -p projects/widget/tsconfig.lib.json --theme material --output docs",
