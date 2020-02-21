@@ -31,7 +31,7 @@ describe('WidgetService', () => {
   });
 
   beforeEach(inject([HttpTestingController], (mock: HttpTestingController) => {
-    service = TestBed.get(WidgetService);
+    service = TestBed.inject(WidgetService);
     httpMock = mock;
   }));
 
