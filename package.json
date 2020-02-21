@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "compodoc": "compodoc -p projects/widget/tsconfig.lib.json --theme material --output docs",
-    "extract-i18n": "ngx-translate-extract --input projects/widget/src --output projects/widget/assets/i18n/strings.pot --clean --sort --format pot",
+    "extract-i18n": "ngx-translate-extract --input projects/widget/src --output projects/widget/assets/widget/i18n/strings.pot --clean --sort --format pot",
     "e2e": "ng e2e"
   },
   "private": false,

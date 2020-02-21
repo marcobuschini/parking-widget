@@ -12,7 +12,7 @@ import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
 import { TranslateTestingModule } from 'ngx-translate-testing';
 
-import en from '../../assets/i18n/en-US.json';
+import en from '../../assets/widget/i18n/en-US.json';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
