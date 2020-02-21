@@ -39,6 +39,11 @@ export class WidgetModule {
   }
 }
 
+/**
+ * This function loads the widget translation files from the deployment directory.
+ *
+ * @param http the HttpClient to load the assets from.
+ */
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/widget/i18n/', '.json');
 }

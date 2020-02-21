@@ -163,20 +163,68 @@
             </div>
         </div>
 
+        <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="forRoot"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            forRoot
+                        </b>
+                        <a href="#forRoot"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>forRoot()</code>
+                </td>
+            </tr>
 
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">projects/widget/src/lib/widget.module.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ModuleWithProviders&lt;WidgetModule&gt;</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule, ModuleWithProviders } from &#x27;@angular/core&#x27;;
 import { WidgetComponent } from &#x27;./widget.component&#x27;;
 import { FlexLayoutModule } from &#x27;@angular/flex-layout&#x27;;
-import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
+import { HttpClient, HttpClientModule } from &#x27;@angular/common/http&#x27;;
 import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
 import { MatCardModule } from &#x27;@angular/material/card&#x27;;
 import { MatListModule } from &#x27;@angular/material/list&#x27;;
 import { MatDividerModule } from &#x27;@angular/material/divider&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
+import { TranslateLoader, TranslateModule, TranslateService } from &#x27;@ngx-translate/core&#x27;;
+import { TranslateHttpLoader } from &#x27;@ngx-translate/http-loader&#x27;;
 
 @NgModule({
   declarations: [WidgetComponent],
@@ -189,9 +237,32 @@ import { CommonModule } from &#x27;@angular/common&#x27;;
     MatDividerModule,
     MatCardModule,
     MatListModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ]
 })
-export class WidgetModule { }
+export class WidgetModule {
+  static forRoot(): ModuleWithProviders&lt;WidgetModule&gt; {
+    return {
+      ngModule: WidgetModule,
+      providers: [TranslateService]
+    } as ModuleWithProviders&lt;WidgetModule&gt;;
+  }
+}
+
+/**
+ * This function loads the widget translation files from the deployment directory.
+ *
+ * @param http the HttpClient to load the assets from.
+ */
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, &#x27;assets/widget/i18n/&#x27;, &#x27;.json&#x27;);
+}
 </code></pre>
     </div>
 </div>

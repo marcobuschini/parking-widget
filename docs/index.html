@@ -33,7 +33,8 @@
 
 <p><a href="https://travis-ci.org/marcobuschini/parking-widget"><img src="https://travis-ci.org/marcobuschini/parking-widget.svg?branch=master" alt="Build Status" class="img-responsive"></a>
 <a href="https://coveralls.io/github/marcobuschini/parking-widget"><img src="https://coveralls.io/repos/github/marcobuschini/parking-widget/badge.svg" alt="Coverage Status" class="img-responsive"></a>
-<a href="https://marcobuschini.github.io/parking-widget/index.html"><img src="https://img.shields.io/badge/docs-read-brightgreen" alt="Documentation" class="img-responsive"></a></p>
+<a href="https://marcobuschini.github.io/parking-widget/index.html"><img src="https://img.shields.io/badge/docs-read-brightgreen" alt="Documentation" class="img-responsive"></a>
+<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen" alt="Commitizen Friendly" class="img-responsive"></a></p>
 <h1 id="parking-widget">Parking Widget</h1>
 <h2 id="specificaions">Specificaions</h2>
 <p>The goal is to show a collection of parking slots and let the user buy one. This must be a &quot;Widget&quot; because it should be an independent module that can be embedded in any Web application. I am an Angular developer, therefore I will write a reusable component for an Angular application.</p>
@@ -81,11 +82,18 @@ configure it, and start it. It must act as an NPM registry proxy, too. This is s
 <h3 id="results-of-publishing">Results of publishing</h3>
 <p>The test proejct it at <a href="https://github.com/marcobuschini/interview-november-2019">https://github.com/marcobuschini/interview-november-2019</a>. It the widget was
 installed &quot;the easy way&quot; described above.</p>
+<h2 id="translating-1">Translating</h2>
+<p>This widget uses <a href="http://www.ngx-translate.com/">NGX Translate</a> for internationalization. To extract
+the strings to translate use the command <code>npm run extract-i18n</code>. This will generate the file
+<code>projects/widget/assets/i18n/strings.pot</code> that can feeded into any translation tool that generates
+translations in JSON format, such as <a href="https://www.oneskyapp.com/">OneSky</a>. Download the translated
+files ZIP archive and unpack it into the <code>projects/widget/assets/i18n/</code> folder.</p>
 <h2 id="bibliography">Bibliography</h2>
 <ol>
 <li><a href="https://angular.io/">Angular documentation</a></li>
 <li><a href="https://material.angular.io/">Angular Material documentation</a></li>
 <li><a href="https://docs.google.com/document/d/1CZC2rcpxffTDfRDs6p1cfbmKNLA6x5O-NtkJglDaBVs/preview">Angular Package Format documentation</a></li>
+<li><a href="https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-angular7-app-with-ngx-translate">NGX Translate</a></li>
 <li><a href="https://docs.npmjs.com/">NPM documentation</a></li>
 </ol>
 
