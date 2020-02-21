@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { WidgetComponent } from './widget.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -7,7 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
@@ -30,8 +30,15 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     })
   ]
 })
-export class WidgetModule { }
+export class WidgetModule {
+  static forRoot(): ModuleWithProviders<WidgetModule> {
+    return {
+      ngModule: WidgetModule,
+      providers: [TranslateService]
+    } as ModuleWithProviders<WidgetModule>;
+  }
+}
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, 'assets/widget/i18n/', '.json');
 }
