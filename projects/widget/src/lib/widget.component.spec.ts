@@ -10,9 +10,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
-import { TranslateTestingModule } from 'ngx-translate-testing';
-
-import en from '../../assets/widget/i18n/en-US.json';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -52,9 +49,6 @@ describe('WidgetComponent', () => {
           MatDividerModule,
           MatListModule,
           HttpClientTestingModule,
-          TranslateTestingModule.withTranslations({
-            ['en-US']: en
-          })
         ],
       }
     );

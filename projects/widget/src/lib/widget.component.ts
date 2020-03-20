@@ -4,7 +4,6 @@ import { ParkingSlot } from './parkingslot';
 import { Feature } from './feature';
 import { Subscription } from 'rxjs';
 import { Vendor } from './vendor';
-import { TranslateService } from '@ngx-translate/core';
 
 /** The parking widget as described in the repository. */
 @Component({
@@ -44,8 +43,6 @@ export class WidgetComponent implements OnInit, OnDestroy {
   public constructor(
     /** The injected backend service. */
     public service: WidgetService,
-    /** The injected translation service */
-    private translate: TranslateService
   ) { }
 
   /**

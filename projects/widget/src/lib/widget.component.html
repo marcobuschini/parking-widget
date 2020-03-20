@@ -10,9 +10,9 @@
         <div fxLayout.lt-sm="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between">
             <div *ngFor="let slot of parkingSlots">
                 {{ slot.name }}
-                <button mat-stroked-button (click)="addToCart(slot)" translate>Add to cart</button>
-                <button mat-stroked-button (click)="expand(slot)" *ngIf="!showDetails[slot.id]" translate>Expand</button>
-                <button mat-stroked-button (click)="collapse(slot)" *ngIf="showDetails[slot.id]" translate>Collapse</button>
+                <button mat-stroked-button (click)="addToCart(slot)">Add to cart</button>
+                <button mat-stroked-button (click)="expand(slot)" *ngIf="!showDetails[slot.id]">Expand</button>
+                <button mat-stroked-button (click)="collapse(slot)" *ngIf="showDetails[slot.id]">Collapse</button>
                 <mat-list role="list" *ngIf="showDetails[slot.id]">
                     <mat-list-item role="listitem" *ngFor="let feature of slot.features" role="listitem">{{ feature }}
                     </mat-list-item>

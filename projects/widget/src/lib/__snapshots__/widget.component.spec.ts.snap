@@ -9,7 +9,6 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
   showDetails={[Function Array]}
-  translate={[Function TranslateService]}
   vendor={[Function Object]}
 >
   <mat-card
@@ -106,16 +105,12 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
            Slot 1 
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Add to cart
           </button>
           
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Expand
           </button>
@@ -137,7 +132,6 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
   showDetails={[Function Array]}
-  translate={[Function TranslateService]}
   vendor={[Function Object]}
 >
   <mat-card
@@ -234,8 +228,6 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
            Slot 1 
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Add to cart
           </button>
@@ -243,8 +235,6 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Collapse
           </button>
@@ -309,7 +299,6 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   parkingSlots$={[Function Subscriber]}
   service={[Function WidgetService]}
   showDetails={[Function Array]}
-  translate={[Function TranslateService]}
   vendor={[Function Object]}
 >
   <mat-card
@@ -406,16 +395,12 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
            Slot 1 
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Add to cart
           </button>
           
           <button
             mat-stroked-button=""
-            ng-reflect-translate=""
-            translate=""
           >
             Expand
           </button>
