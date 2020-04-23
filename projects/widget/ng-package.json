@@ -6,6 +6,6 @@
   },
   "keepLifecycleScripts": true,
   "assets": [
-    "assets/widget/i18n/*.json"
+    "assets/widget/i18n/*.js"
   ]
 }
