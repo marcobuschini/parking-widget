@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed, fakeAsync, flush } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async as realAsync, fakeAsync, flush, flushMicrotasks } from '@angular/core/testing';
 
 import { WidgetComponent } from './widget.component';
 import { Vendor } from './vendor';
@@ -10,10 +10,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
+import { NgI18nModule, TranslateService } from 'ng-i18n';
+import en_US from '../../assets/widget/i18n/en-US';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
   let fixture: ComponentFixture<WidgetComponent>;
+  let translate: TranslateService;
 
   let vendorSpy: jest.SpyInstance<Observable<Feature[]>>;
   let slotsSpy: jest.SpyInstance<Observable<ParkingSlot[]>>;
@@ -40,6 +43,12 @@ describe('WidgetComponent', () => {
     }
   ];
 
+  function setTimeoutPromise(milliseconds: number): Promise<void> {
+    return new Promise((resolve) => {
+      setTimeout(resolve, milliseconds);
+    });
+  }
+
   beforeEach(async () => {
     TestBed.configureTestingModule(
       {
@@ -49,6 +58,7 @@ describe('WidgetComponent', () => {
           MatDividerModule,
           MatListModule,
           HttpClientTestingModule,
+          NgI18nModule,
         ],
       }
     );
@@ -64,6 +74,8 @@ describe('WidgetComponent', () => {
       .mockReturnValue(of(dummySlots));
     addSpy = jest.spyOn(component.buying, 'emit');
 
+    translate = TestBed.inject(TranslateService);
+    translate.addCulture({isoCode: 'en_US', name: 'English (United States)'}, en_US);
     fixture.detectChanges();
   });
 
@@ -71,12 +83,12 @@ describe('WidgetComponent', () => {
     component.ngOnDestroy();
   });
 
-  it('should create component with hidden slots, then show, then hide back', fakeAsync(() => {
+  it('should create component with hidden slots, then show, then hide back', realAsync(async () => {
     expect(component).toBeTruthy();
 
     component.ngOnInit();
 
-    flush();
+    await setTimeoutPromise(1000);
 
     expect(vendorSpy).toHaveBeenCalled();
     expect(slotsSpy).toHaveBeenCalled();
@@ -86,24 +98,24 @@ describe('WidgetComponent', () => {
     let button = fixture.debugElement.queryAll(By.css('button'))[1].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
+    await setTimeoutPromise(1000);
 
     expect(fixture).toMatchSnapshot();
 
     button = fixture.debugElement.queryAll(By.css('button'))[1].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
+    await setTimeoutPromise(1000);
 
     expect(fixture).toMatchSnapshot();
   }));
 
-  it('should add to cart', fakeAsync(() => {
+  it('should add to cart', () => {
     component.ngOnInit();
-
-    flush();
 
     const button = fixture.debugElement.queryAll(By.css('button'))[0].nativeElement as HTMLButtonElement;
     button.click();
     fixture.detectChanges();
     expect(addSpy).toHaveBeenCalled();
-  }));
+  });
 });
