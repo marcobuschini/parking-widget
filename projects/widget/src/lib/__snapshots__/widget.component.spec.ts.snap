@@ -12,7 +12,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   vendor={[Function Object]}
 >
   <mat-card
-    class="mat-card"
+    class="mat-card mat-focus-indicator"
   >
     <mat-card-title
       class="mat-card-title"
@@ -33,7 +33,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
       >
         
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -52,7 +52,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -71,7 +71,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -135,7 +135,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   vendor={[Function Object]}
 >
   <mat-card
-    class="mat-card"
+    class="mat-card mat-focus-indicator"
   >
     <mat-card-title
       class="mat-card-title"
@@ -156,7 +156,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
       >
         
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -175,7 +175,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -194,7 +194,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -245,7 +245,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           >
             
             <mat-list-item
-              class="mat-list-item"
+              class="mat-list-item mat-focus-indicator"
               role="listitem"
             >
               <div
@@ -264,7 +264,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
               </div>
             </mat-list-item>
             <mat-list-item
-              class="mat-list-item"
+              class="mat-list-item mat-focus-indicator"
               role="listitem"
             >
               <div
@@ -302,7 +302,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
   vendor={[Function Object]}
 >
   <mat-card
-    class="mat-card"
+    class="mat-card mat-focus-indicator"
   >
     <mat-card-title
       class="mat-card-title"
@@ -323,7 +323,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
       >
         
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -342,7 +342,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div
@@ -361,7 +361,7 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           </div>
         </mat-list-item>
         <mat-list-item
-          class="mat-list-item"
+          class="mat-list-item mat-focus-indicator"
           role="listitem"
         >
           <div

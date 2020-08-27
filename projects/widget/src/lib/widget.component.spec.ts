@@ -10,13 +10,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { By } from '@angular/platform-browser';
-import { NgI18nModule, TranslateService } from 'ng-i18n';
-import en_US from '../../assets/widget/i18n/en-US';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
   let fixture: ComponentFixture<WidgetComponent>;
-  let translate: TranslateService;
 
   let vendorSpy: jest.SpyInstance<Observable<Feature[]>>;
   let slotsSpy: jest.SpyInstance<Observable<ParkingSlot[]>>;
@@ -58,7 +55,6 @@ describe('WidgetComponent', () => {
           MatDividerModule,
           MatListModule,
           HttpClientTestingModule,
-          NgI18nModule,
         ],
       }
     );
@@ -74,8 +70,6 @@ describe('WidgetComponent', () => {
       .mockReturnValue(of(dummySlots));
     addSpy = jest.spyOn(component.buying, 'emit');
 
-    translate = TestBed.inject(TranslateService);
-    translate.addCulture({isoCode: 'en_US', name: 'English (United States)'}, en_US);
     fixture.detectChanges();
   });
 

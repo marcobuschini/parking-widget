@@ -7,7 +7,6 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 import { CommonModule } from '@angular/common';
-import { NgI18nModule } from 'ng-i18n';
 
 @NgModule({
   declarations: [WidgetComponent],
@@ -20,7 +19,6 @@ import { NgI18nModule } from 'ng-i18n';
     MatDividerModule,
     MatCardModule,
     MatListModule,
-    NgI18nModule
   ]
 })
 export class WidgetModule {
