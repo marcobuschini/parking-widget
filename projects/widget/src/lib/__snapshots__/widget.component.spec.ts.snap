@@ -106,13 +106,13 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           <button
             mat-stroked-button=""
           >
-            Add to cart
+             Add to cart 
           </button>
           
           <button
             mat-stroked-button=""
           >
-            Expand
+             Expand 
           </button>
           
           
@@ -229,14 +229,14 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           <button
             mat-stroked-button=""
           >
-            Add to cart
+             Add to cart 
           </button>
           
           
           <button
             mat-stroked-button=""
           >
-            Collapse
+             Collapse 
           </button>
           
           <mat-list
@@ -396,13 +396,13 @@ exports[`WidgetComponent should create component with hidden slots, then show, t
           <button
             mat-stroked-button=""
           >
-            Add to cart
+             Add to cart 
           </button>
           
           <button
             mat-stroked-button=""
           >
-            Expand
+             Expand 
           </button>
           
           
