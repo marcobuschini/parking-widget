@@ -41,7 +41,7 @@
     "husky": "^4.2.15",
     "jest": "^24.9.0",
     "jest-html-reporter": "^2.8.2",
-    "ng-packagr": "^9.1.1",
+    "ng-packagr": "^15.1.2",
     "protractor": "~5.4.4",
     "ts-jest": "^24.3.0",
     "ts-node": "~7.0.0",
